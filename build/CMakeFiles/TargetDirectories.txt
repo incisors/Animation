@@ -1,0 +1,4 @@
+/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles/menv.dir
+/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles/CopyShaders.dir
+/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles/edit_cache.dir
+/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles/rebuild_cache.dir
