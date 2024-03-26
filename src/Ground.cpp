@@ -2,25 +2,26 @@
 
 #define EPSILON 1e-2f
 
-Ground::Ground(glm::vec3 topleft, float size, GLuint _programID)
+Ground::Ground(glm::vec3 center, float size, GLuint _programID)
 {
 	programID = _programID;
+	
+	transMat = glm::translate(center);
+	scaleMat = glm::scale(glm::vec3(size, size, size));
+	model = transMat * scaleMat;
 
-	model = glm::translate(glm::vec3(0.0f, topleft.y - EPSILON, 0.0f));
-	topleft.y = 0.0f;
-
-	points.push_back(topleft);
-	points.push_back(topleft + glm::vec3(size, 0.0f, 0.0f));
-	points.push_back(topleft + glm::vec3(0.0f, 0.0f, size));
-	points.push_back(topleft + glm::vec3(size, 0.0f, size));
+	points.push_back(glm::vec3(-0.5f, 0.0f, -0.5f));
+	points.push_back(glm::vec3(-0.5f, 0.0f, 0.5f));
+	points.push_back(glm::vec3(0.5f, 0.0f, 0.5f));
+	points.push_back(glm::vec3(0.5f, 0.0f, -0.5f));
 
 	normals.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
 	normals.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
 	normals.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
 	normals.push_back(glm::vec3(0.0f, 1.0f, 0.0f));
 
+	indices.push_back(glm::ivec3(0, 1, 2));
 	indices.push_back(glm::ivec3(0, 2, 3));
-	indices.push_back(glm::ivec3(0, 3, 1));
 
 
 	// Generate a vertex array (VAO), vertex buffer objects (VBO) and EBO.
@@ -74,6 +75,7 @@ Ground::Ground(glm::vec3 topleft, float size, GLuint _programID)
 	glBindVertexArray(0);
 }
 
+
 Ground::~Ground()
 {
 	// Delete the VBOs and the VAO.
@@ -87,11 +89,23 @@ void Ground::SetGroundLevel(float level)
 	model = glm::translate(glm::vec3(0.0f, level - EPSILON, 0.0f));
 }
 
-void Ground::Draw(const glm::mat4& viewProjMtx, GLuint programID)
+void Ground::SetGroundCenter(glm::vec3 center)
+{
+	transMat = glm::translate(center);
+	model = transMat * scaleMat;
+}
+
+void Ground::SetGroundSize(float _size)
+{
+	scaleMat = glm::scale(glm::vec3(_size, _size, _size));
+	model = transMat * scaleMat;
+}
+
+void Ground::Draw(const glm::mat4& viewProjMtx)
 {
 	glUseProgram(programID);
 
-	glm::vec3 color(1.0f, 0.1f, 0.1f);
+	glm::vec3 color(0.8f, 0.2f, 0.1f);
 
 	// get the locations and send the uniforms to the shader 
 	glUniformMatrix4fv(glGetUniformLocation(programID, "viewProj"), 1, GL_FALSE, (float*)&viewProjMtx);

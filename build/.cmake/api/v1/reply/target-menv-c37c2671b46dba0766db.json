@@ -133,7 +133,11 @@
 				22,
 				23,
 				24,
-				25
+				25,
+				26,
+				27,
+				28,
+				29
 			]
 		}
 	],
@@ -169,7 +173,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "/opt/homebrew/lib/libglfw.3.3.dylib",
+				"fragment" : "/opt/homebrew/lib/libglfw.3.4.dylib",
 				"role" : "libraries"
 			}
 		],
@@ -213,7 +217,11 @@
 				22,
 				23,
 				24,
-				25
+				25,
+				26,
+				27,
+				28,
+				29
 			]
 		}
 	],
@@ -306,6 +314,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/GeneralParticle.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/Ground.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -325,6 +339,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/Particle.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ParticleSystem.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -372,7 +392,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/Vertex.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/Window.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/shier.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

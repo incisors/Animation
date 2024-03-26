@@ -1,8 +1,6 @@
 #pragma once
 #include "core.h"
 #include <vector>
-
-
 class Ground
 {
 private:
@@ -12,6 +10,9 @@ private:
 
 	glm::mat4 model;
 
+	glm::mat4 transMat;
+	glm::mat4 scaleMat;
+
 	GLuint programID;
 	GLuint vao, vbos[2], ebo;
 
@@ -20,5 +21,8 @@ public:
 	~Ground();
 
 	void SetGroundLevel(float level);
-	void Draw(const glm::mat4& viewProjMtx, GLuint programID);
+	void Draw(const glm::mat4& viewProjMtx);
+
+	void SetGroundCenter(glm::vec3 center);
+	void SetGroundSize(float _size);
 };

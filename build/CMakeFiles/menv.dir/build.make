@@ -265,10 +265,24 @@ CMakeFiles/menv.dir/src/DOF.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/DOF.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/DOF.cpp -o CMakeFiles/menv.dir/src/DOF.cpp.s
 
+CMakeFiles/menv.dir/src/GeneralParticle.cpp.o: CMakeFiles/menv.dir/flags.make
+CMakeFiles/menv.dir/src/GeneralParticle.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/GeneralParticle.cpp
+CMakeFiles/menv.dir/src/GeneralParticle.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/menv.dir/src/GeneralParticle.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/GeneralParticle.cpp.o -MF CMakeFiles/menv.dir/src/GeneralParticle.cpp.o.d -o CMakeFiles/menv.dir/src/GeneralParticle.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/GeneralParticle.cpp
+
+CMakeFiles/menv.dir/src/GeneralParticle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/menv.dir/src/GeneralParticle.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jianghaochen/Desktop/cse169_animation/src/GeneralParticle.cpp > CMakeFiles/menv.dir/src/GeneralParticle.cpp.i
+
+CMakeFiles/menv.dir/src/GeneralParticle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/GeneralParticle.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/GeneralParticle.cpp -o CMakeFiles/menv.dir/src/GeneralParticle.cpp.s
+
 CMakeFiles/menv.dir/src/Ground.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Ground.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Ground.cpp
 CMakeFiles/menv.dir/src/Ground.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/menv.dir/src/Ground.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/menv.dir/src/Ground.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Ground.cpp.o -MF CMakeFiles/menv.dir/src/Ground.cpp.o.d -o CMakeFiles/menv.dir/src/Ground.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Ground.cpp
 
 CMakeFiles/menv.dir/src/Ground.cpp.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/menv.dir/src/Ground.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/Joint.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Joint.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Joint.cpp
 CMakeFiles/menv.dir/src/Joint.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/menv.dir/src/Joint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/menv.dir/src/Joint.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Joint.cpp.o -MF CMakeFiles/menv.dir/src/Joint.cpp.o.d -o CMakeFiles/menv.dir/src/Joint.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Joint.cpp
 
 CMakeFiles/menv.dir/src/Joint.cpp.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/menv.dir/src/Joint.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/KeyFrame.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/KeyFrame.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/KeyFrame.cpp
 CMakeFiles/menv.dir/src/KeyFrame.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/menv.dir/src/KeyFrame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/menv.dir/src/KeyFrame.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/KeyFrame.cpp.o -MF CMakeFiles/menv.dir/src/KeyFrame.cpp.o.d -o CMakeFiles/menv.dir/src/KeyFrame.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/KeyFrame.cpp
 
 CMakeFiles/menv.dir/src/KeyFrame.cpp.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/menv.dir/src/KeyFrame.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/Particle.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Particle.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Particle.cpp
 CMakeFiles/menv.dir/src/Particle.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/menv.dir/src/Particle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/menv.dir/src/Particle.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Particle.cpp.o -MF CMakeFiles/menv.dir/src/Particle.cpp.o.d -o CMakeFiles/menv.dir/src/Particle.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Particle.cpp
 
 CMakeFiles/menv.dir/src/Particle.cpp.i: cmake_force
@@ -321,10 +335,24 @@ CMakeFiles/menv.dir/src/Particle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/Particle.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/Particle.cpp -o CMakeFiles/menv.dir/src/Particle.cpp.s
 
+CMakeFiles/menv.dir/src/ParticleSystem.cpp.o: CMakeFiles/menv.dir/flags.make
+CMakeFiles/menv.dir/src/ParticleSystem.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/ParticleSystem.cpp
+CMakeFiles/menv.dir/src/ParticleSystem.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/menv.dir/src/ParticleSystem.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/ParticleSystem.cpp.o -MF CMakeFiles/menv.dir/src/ParticleSystem.cpp.o.d -o CMakeFiles/menv.dir/src/ParticleSystem.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/ParticleSystem.cpp
+
+CMakeFiles/menv.dir/src/ParticleSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/menv.dir/src/ParticleSystem.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jianghaochen/Desktop/cse169_animation/src/ParticleSystem.cpp > CMakeFiles/menv.dir/src/ParticleSystem.cpp.i
+
+CMakeFiles/menv.dir/src/ParticleSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/ParticleSystem.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/ParticleSystem.cpp -o CMakeFiles/menv.dir/src/ParticleSystem.cpp.s
+
 CMakeFiles/menv.dir/src/Player.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Player.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Player.cpp
 CMakeFiles/menv.dir/src/Player.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/menv.dir/src/Player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/menv.dir/src/Player.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Player.cpp.o -MF CMakeFiles/menv.dir/src/Player.cpp.o.d -o CMakeFiles/menv.dir/src/Player.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Player.cpp
 
 CMakeFiles/menv.dir/src/Player.cpp.i: cmake_force
@@ -338,7 +366,7 @@ CMakeFiles/menv.dir/src/Player.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/Shader.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Shader.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Shader.cpp
 CMakeFiles/menv.dir/src/Shader.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/menv.dir/src/Shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/menv.dir/src/Shader.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Shader.cpp.o -MF CMakeFiles/menv.dir/src/Shader.cpp.o.d -o CMakeFiles/menv.dir/src/Shader.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Shader.cpp
 
 CMakeFiles/menv.dir/src/Shader.cpp.i: cmake_force
@@ -352,7 +380,7 @@ CMakeFiles/menv.dir/src/Shader.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/Skeleton.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Skeleton.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Skeleton.cpp
 CMakeFiles/menv.dir/src/Skeleton.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/menv.dir/src/Skeleton.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/menv.dir/src/Skeleton.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Skeleton.cpp.o -MF CMakeFiles/menv.dir/src/Skeleton.cpp.o.d -o CMakeFiles/menv.dir/src/Skeleton.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Skeleton.cpp
 
 CMakeFiles/menv.dir/src/Skeleton.cpp.i: cmake_force
@@ -366,7 +394,7 @@ CMakeFiles/menv.dir/src/Skeleton.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/Skin.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Skin.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Skin.cpp
 CMakeFiles/menv.dir/src/Skin.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/menv.dir/src/Skin.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/menv.dir/src/Skin.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Skin.cpp.o -MF CMakeFiles/menv.dir/src/Skin.cpp.o.d -o CMakeFiles/menv.dir/src/Skin.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Skin.cpp
 
 CMakeFiles/menv.dir/src/Skin.cpp.i: cmake_force
@@ -380,7 +408,7 @@ CMakeFiles/menv.dir/src/Skin.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/SpringDamper.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/SpringDamper.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/SpringDamper.cpp
 CMakeFiles/menv.dir/src/SpringDamper.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/menv.dir/src/SpringDamper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/menv.dir/src/SpringDamper.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/SpringDamper.cpp.o -MF CMakeFiles/menv.dir/src/SpringDamper.cpp.o.d -o CMakeFiles/menv.dir/src/SpringDamper.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/SpringDamper.cpp
 
 CMakeFiles/menv.dir/src/SpringDamper.cpp.i: cmake_force
@@ -394,7 +422,7 @@ CMakeFiles/menv.dir/src/SpringDamper.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/Tokenizer.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Tokenizer.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Tokenizer.cpp
 CMakeFiles/menv.dir/src/Tokenizer.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/menv.dir/src/Tokenizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/menv.dir/src/Tokenizer.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Tokenizer.cpp.o -MF CMakeFiles/menv.dir/src/Tokenizer.cpp.o.d -o CMakeFiles/menv.dir/src/Tokenizer.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Tokenizer.cpp
 
 CMakeFiles/menv.dir/src/Tokenizer.cpp.i: cmake_force
@@ -408,7 +436,7 @@ CMakeFiles/menv.dir/src/Tokenizer.cpp.s: cmake_force
 CMakeFiles/menv.dir/src/Triangle.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Triangle.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Triangle.cpp
 CMakeFiles/menv.dir/src/Triangle.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/menv.dir/src/Triangle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/menv.dir/src/Triangle.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Triangle.cpp.o -MF CMakeFiles/menv.dir/src/Triangle.cpp.o.d -o CMakeFiles/menv.dir/src/Triangle.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Triangle.cpp
 
 CMakeFiles/menv.dir/src/Triangle.cpp.i: cmake_force
@@ -419,10 +447,24 @@ CMakeFiles/menv.dir/src/Triangle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/Triangle.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/Triangle.cpp -o CMakeFiles/menv.dir/src/Triangle.cpp.s
 
+CMakeFiles/menv.dir/src/Vertex.cpp.o: CMakeFiles/menv.dir/flags.make
+CMakeFiles/menv.dir/src/Vertex.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Vertex.cpp
+CMakeFiles/menv.dir/src/Vertex.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/menv.dir/src/Vertex.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Vertex.cpp.o -MF CMakeFiles/menv.dir/src/Vertex.cpp.o.d -o CMakeFiles/menv.dir/src/Vertex.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Vertex.cpp
+
+CMakeFiles/menv.dir/src/Vertex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/menv.dir/src/Vertex.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jianghaochen/Desktop/cse169_animation/src/Vertex.cpp > CMakeFiles/menv.dir/src/Vertex.cpp.i
+
+CMakeFiles/menv.dir/src/Vertex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/Vertex.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/Vertex.cpp -o CMakeFiles/menv.dir/src/Vertex.cpp.s
+
 CMakeFiles/menv.dir/src/Window.cpp.o: CMakeFiles/menv.dir/flags.make
 CMakeFiles/menv.dir/src/Window.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/Window.cpp
 CMakeFiles/menv.dir/src/Window.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/menv.dir/src/Window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/menv.dir/src/Window.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/Window.cpp.o -MF CMakeFiles/menv.dir/src/Window.cpp.o.d -o CMakeFiles/menv.dir/src/Window.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/Window.cpp
 
 CMakeFiles/menv.dir/src/Window.cpp.i: cmake_force
@@ -432,6 +474,20 @@ CMakeFiles/menv.dir/src/Window.cpp.i: cmake_force
 CMakeFiles/menv.dir/src/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/Window.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/Window.cpp -o CMakeFiles/menv.dir/src/Window.cpp.s
+
+CMakeFiles/menv.dir/src/shier.cpp.o: CMakeFiles/menv.dir/flags.make
+CMakeFiles/menv.dir/src/shier.cpp.o: /Users/jianghaochen/Desktop/cse169_animation/src/shier.cpp
+CMakeFiles/menv.dir/src/shier.cpp.o: CMakeFiles/menv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/menv.dir/src/shier.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/menv.dir/src/shier.cpp.o -MF CMakeFiles/menv.dir/src/shier.cpp.o.d -o CMakeFiles/menv.dir/src/shier.cpp.o -c /Users/jianghaochen/Desktop/cse169_animation/src/shier.cpp
+
+CMakeFiles/menv.dir/src/shier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/menv.dir/src/shier.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jianghaochen/Desktop/cse169_animation/src/shier.cpp > CMakeFiles/menv.dir/src/shier.cpp.i
+
+CMakeFiles/menv.dir/src/shier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/menv.dir/src/shier.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jianghaochen/Desktop/cse169_animation/src/shier.cpp -o CMakeFiles/menv.dir/src/shier.cpp.s
 
 # Object files for target menv
 menv_OBJECTS = \
@@ -449,10 +505,12 @@ menv_OBJECTS = \
 "CMakeFiles/menv.dir/src/Cloth.cpp.o" \
 "CMakeFiles/menv.dir/src/Cube.cpp.o" \
 "CMakeFiles/menv.dir/src/DOF.cpp.o" \
+"CMakeFiles/menv.dir/src/GeneralParticle.cpp.o" \
 "CMakeFiles/menv.dir/src/Ground.cpp.o" \
 "CMakeFiles/menv.dir/src/Joint.cpp.o" \
 "CMakeFiles/menv.dir/src/KeyFrame.cpp.o" \
 "CMakeFiles/menv.dir/src/Particle.cpp.o" \
+"CMakeFiles/menv.dir/src/ParticleSystem.cpp.o" \
 "CMakeFiles/menv.dir/src/Player.cpp.o" \
 "CMakeFiles/menv.dir/src/Shader.cpp.o" \
 "CMakeFiles/menv.dir/src/Skeleton.cpp.o" \
@@ -460,7 +518,9 @@ menv_OBJECTS = \
 "CMakeFiles/menv.dir/src/SpringDamper.cpp.o" \
 "CMakeFiles/menv.dir/src/Tokenizer.cpp.o" \
 "CMakeFiles/menv.dir/src/Triangle.cpp.o" \
-"CMakeFiles/menv.dir/src/Window.cpp.o"
+"CMakeFiles/menv.dir/src/Vertex.cpp.o" \
+"CMakeFiles/menv.dir/src/Window.cpp.o" \
+"CMakeFiles/menv.dir/src/shier.cpp.o"
 
 # External object files for target menv
 menv_EXTERNAL_OBJECTS =
@@ -479,10 +539,12 @@ menv: CMakeFiles/menv.dir/src/Channel.cpp.o
 menv: CMakeFiles/menv.dir/src/Cloth.cpp.o
 menv: CMakeFiles/menv.dir/src/Cube.cpp.o
 menv: CMakeFiles/menv.dir/src/DOF.cpp.o
+menv: CMakeFiles/menv.dir/src/GeneralParticle.cpp.o
 menv: CMakeFiles/menv.dir/src/Ground.cpp.o
 menv: CMakeFiles/menv.dir/src/Joint.cpp.o
 menv: CMakeFiles/menv.dir/src/KeyFrame.cpp.o
 menv: CMakeFiles/menv.dir/src/Particle.cpp.o
+menv: CMakeFiles/menv.dir/src/ParticleSystem.cpp.o
 menv: CMakeFiles/menv.dir/src/Player.cpp.o
 menv: CMakeFiles/menv.dir/src/Shader.cpp.o
 menv: CMakeFiles/menv.dir/src/Skeleton.cpp.o
@@ -490,11 +552,13 @@ menv: CMakeFiles/menv.dir/src/Skin.cpp.o
 menv: CMakeFiles/menv.dir/src/SpringDamper.cpp.o
 menv: CMakeFiles/menv.dir/src/Tokenizer.cpp.o
 menv: CMakeFiles/menv.dir/src/Triangle.cpp.o
+menv: CMakeFiles/menv.dir/src/Vertex.cpp.o
 menv: CMakeFiles/menv.dir/src/Window.cpp.o
+menv: CMakeFiles/menv.dir/src/shier.cpp.o
 menv: CMakeFiles/menv.dir/build.make
-menv: /opt/homebrew/lib/libglfw.3.3.dylib
+menv: /opt/homebrew/lib/libglfw.3.4.dylib
 menv: CMakeFiles/menv.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable menv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jianghaochen/Desktop/cse169_animation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable menv"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/menv.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

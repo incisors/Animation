@@ -1,47 +1,31 @@
 #pragma once
 
 #include "core.h"
+#include <iostream>
 
-#define EPSILON 1e-6
-#define MAX_FORCE 1e9
-
-class Particle
-{
-private:
-	glm::vec3* position;
-	glm::vec3* normal;
-	glm::vec3 velocity;
-	glm::vec3 force;
-	glm::vec3 prevForce;
-	bool isFixed = false;
-	/*int numOfTriangles = 0;*/
-
-	const float* mass;
-	const float* gravityAcce;
-	const float* groundPos;
-
+class Particle {
 public:
-	Particle(glm::vec3* _position, glm::vec3* normal, float* mass, float* gravityAcce, float* groundPos);
+    void ApplyForce(glm::vec3 &f) {
+        Force+=f;
+    }
 
-	/*static void SetMass(float _mass);
-	static void SetGravityAcce(float _g);*/
+    void Integrate(float deltaTime) {
+        if (isFixed) return; // Do not integrate if the particle is fixed (pinned to the world
 
-	/*void AddTriangleCount();*/
+        glm::vec3 accel=(1/Mass) * Force; // Apply Newton’s Second Law (f=ma)
+        Velocity += accel*deltaTime; // Forward Euler integration to get new velocity
+        Position += Velocity*deltaTime; // Backward Euler integration to get new position
+        Force=glm::vec3(0); // Zero force out so next frame will start fresh
+    }
 
-	void ApplyForce(glm::vec3 f);
-	void ApplyGravity();
-	void Integrate(float deltaTime);
+    void ApplyImpulse(const glm::vec3& imp) {
+        Velocity+=imp/Mass;
+    }
 
-	void ResetForce();
-
-	glm::vec3 GetVelocity();
-	glm::vec3 GetPosition();
-
-	void ResetNormal();
-	void AddNormal(glm::vec3 n);
-
-	void GroundCollision();
-
-	void SetPosition(glm::vec3 pos) { *position = pos; }
-	void SetFixed(bool _isFixed) { isFixed = _isFixed; }
+    glm::vec3 Position = glm::vec3(0, 0, 0);
+    glm::vec3 Normal = glm::vec3(0, 1, 0);
+    glm::vec3 Velocity = glm::vec3(0, 0, 0);
+    glm::vec3 Force = glm::vec3(0, 0, 0);
+    float Mass = 1.0f;
+    bool isFixed = false;
 };

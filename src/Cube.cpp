@@ -1,7 +1,6 @@
 #include "Cube.h"
 
-Cube::Cube(glm::vec3 cubeMin, glm::vec3 cubeMax)
-{
+Cube::Cube(glm::vec3 cubeMin, glm::vec3 cubeMax) {
     // Model matrix.
     model = glm::mat4(1.0f);
 
@@ -86,12 +85,12 @@ Cube::Cube(glm::vec3 cubeMin, glm::vec3 cubeMax)
 
     // Specify indices
     indices = {
-        0, 1, 2, 0, 2, 3,       // Front
-        4, 5, 6, 4, 6, 7,       // Back
-        8, 9, 10, 8, 10, 11,    // Top
-        12, 13, 14, 12, 14, 15, // Bottom
-        16, 17, 18, 16, 18, 19, // Left
-        20, 21, 22, 20, 22, 23, // Right
+        0, 1, 2, 0, 2, 3,        // Front
+        4, 5, 6, 4, 6, 7,        // Back
+        8, 9, 10, 8, 10, 11,     // Top
+        12, 13, 14, 12, 14, 15,  // Bottom
+        16, 17, 18, 16, 18, 19,  // Left
+        20, 21, 22, 20, 22, 23,  // Right
     };
 
     // Generate a vertex array (VAO) and two vertex buffer objects (VBO).
@@ -124,8 +123,7 @@ Cube::Cube(glm::vec3 cubeMin, glm::vec3 cubeMax)
     glBindVertexArray(0);
 }
 
-Cube::~Cube()
-{
+Cube::~Cube() {
     // Delete the VBOs and the VAO.
     glDeleteBuffers(1, &VBO_positions);
     glDeleteBuffers(1, &VBO_normals);
@@ -133,14 +131,13 @@ Cube::~Cube()
     glDeleteVertexArrays(1, &VAO);
 }
 
-void Cube::draw(const glm::mat4 &viewProjMtx, GLuint shader)
-{
+void Cube::draw(const glm::mat4& viewProjMtx, GLuint shader) {
     // actiavte the shader program
     glUseProgram(shader);
 
     // get the locations and send the uniforms to the shader
-    glUniformMatrix4fv(glGetUniformLocation(shader, "viewProj"), 1, false, (float *)&viewProjMtx);
-    glUniformMatrix4fv(glGetUniformLocation(shader, "model"), 1, GL_FALSE, (float *)&model);
+    glUniformMatrix4fv(glGetUniformLocation(shader, "viewProj"), 1, false, (float*)&viewProjMtx);
+    glUniformMatrix4fv(glGetUniformLocation(shader, "model"), 1, GL_FALSE, (float*)&model);
     glUniform3fv(glGetUniformLocation(shader, "DiffuseColor"), 1, &color[0]);
 
     // Bind the VAO
@@ -154,14 +151,12 @@ void Cube::draw(const glm::mat4 &viewProjMtx, GLuint shader)
     glUseProgram(0);
 }
 
-void Cube::update()
-{
+void Cube::update() {
     // Spin the cube
     spin(0.05f);
 }
 
-void Cube::spin(float deg)
-{
+void Cube::spin(float deg) {
     // Update the model matrix by multiplying a rotation matrix
     model = model * glm::rotate(glm::radians(deg), glm::vec3(0.0f, 1.0f, 0.0f));
 }

@@ -409,10 +409,8 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /opt/homebrew/include/glm/gtx/../gtc/../trigonometric.hpp \
   /opt/homebrew/include/glm/gtx/../gtc/../matrix.hpp \
   /opt/homebrew/include/glm/gtx/transform.inl \
-  /opt/homebrew/include/glm/gtx/euler_angles.hpp \
-  /opt/homebrew/include/glm/gtx/euler_angles.inl \
-  /opt/homebrew/include/glm/gtx/compatibility.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/quaternion.hpp \
+  /opt/homebrew/include/glm/gtc/type_ptr.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../gtc/quaternion.hpp \
   /opt/homebrew/include/glm/gtx/../gtc/../gtc/constants.hpp \
   /opt/homebrew/include/glm/gtx/../gtc/../gtc/matrix_transform.hpp \
   /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_relational.hpp \
@@ -440,6 +438,7 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /opt/homebrew/include/glm/detail/../gtc/matrix_transform.hpp \
   /opt/homebrew/include/glm/detail/type_quat.inl \
   /opt/homebrew/include/glm/detail/../trigonometric.hpp \
+  /opt/homebrew/include/glm/detail/../ext/quaternion_common.hpp \
   /opt/homebrew/include/glm/detail/../ext/quaternion_geometric.hpp \
   /opt/homebrew/include/glm/gtx/../gtc/../ext/quaternion_float_precision.hpp \
   /opt/homebrew/include/glm/gtx/../gtc/../ext/quaternion_double.hpp \
@@ -464,8 +463,36 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /opt/homebrew/include/glm/gtx/../gtc/epsilon.inl \
   /opt/homebrew/include/glm/gtx/../gtc/../vector_relational.hpp \
   /opt/homebrew/include/glm/gtx/../gtc/../common.hpp \
-  /opt/homebrew/include/glm/gtx/compatibility.inl \
-  /Users/jianghaochen/Desktop/cse169_animation/include/Cube.h \
+  /opt/homebrew/include/glm/gtx/../gtc/../gtc/vec1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_bool1.hpp \
+  /opt/homebrew/include/glm/./ext/../detail/type_vec1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_bool1_precision.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_float1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_float1_precision.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_double1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_double1_precision.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_int1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_int1_sized.hpp \
+  /opt/homebrew/include/glm/./ext/../ext/vector_int1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_uint1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_uint1_sized.hpp \
+  /opt/homebrew/include/glm/./ext/../ext/vector_uint1.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat2x2.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat2x3.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat2x4.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat3x2.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat3x3.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat3x4.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat4x2.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/../mat4x3.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cstring \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_rsize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_errno_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/strings.h \
+  /opt/homebrew/include/glm/gtx/../gtc/type_ptr.inl \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \
@@ -573,13 +600,6 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/voidify.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/new \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/exception \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cstring \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_rsize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_errno_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_ssize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__format/enable_insertable.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__format/formatter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__format/format_fwd.h \
@@ -979,8 +999,9 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/year_month_weekday.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/literals.h \
-  /Users/jianghaochen/Desktop/cse169_animation/include/Shader.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/fstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/ios \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/locale.h \
@@ -991,7 +1012,6 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__errc \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/string \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/_xlocale.h \
@@ -1006,7 +1026,6 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/bitset \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/streambuf \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/nl_types.h \
@@ -1038,6 +1057,14 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cstdarg \
+  /opt/homebrew/include/glm/gtx/euler_angles.hpp \
+  /opt/homebrew/include/glm/gtx/euler_angles.inl \
+  /opt/homebrew/include/glm/gtx/compatibility.hpp \
+  /opt/homebrew/include/glm/gtx/../gtc/quaternion.hpp \
+  /opt/homebrew/include/glm/gtx/compatibility.inl \
+  /Users/jianghaochen/Desktop/cse169_animation/include/Cube.h \
+  /Users/jianghaochen/Desktop/cse169_animation/include/Shader.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
@@ -1056,7 +1083,6 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/iostream \
   /Users/jianghaochen/Desktop/cse169_animation/include/Player.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/Animation.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/Channel.h \
@@ -1070,34 +1096,61 @@ CMakeFiles/menv.dir/src/Window.cpp.o: \
   /Users/jianghaochen/Desktop/cse169_animation/include/Particle.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/SpringDamper.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/Triangle.h \
+  /Users/jianghaochen/Desktop/cse169_animation/include/Vertex.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/Ground.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/imgui/imgui.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/imgui/imconfig.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/imgui/backends/imgui_impl_glfw.h \
   /Users/jianghaochen/Desktop/cse169_animation/include/imgui/backends/imgui_impl_opengl3.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/TargetConditionals.h \
-  /opt/homebrew/include/glm/gtc/type_ptr.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../gtc/quaternion.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../gtc/vec1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_bool1.hpp \
-  /opt/homebrew/include/glm/./ext/../detail/type_vec1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_bool1_precision.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_float1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_float1_precision.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_double1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_double1_precision.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_int1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_int1_sized.hpp \
-  /opt/homebrew/include/glm/./ext/../ext/vector_int1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_uint1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../ext/vector_uint1_sized.hpp \
-  /opt/homebrew/include/glm/./ext/../ext/vector_uint1.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat2x2.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat2x3.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat2x4.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat3x2.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat3x3.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat3x4.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat4x2.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/../mat4x3.hpp \
-  /opt/homebrew/include/glm/gtx/../gtc/type_ptr.inl
+  /Users/jianghaochen/Desktop/cse169_animation/include/ParticleSystem.h \
+  /Users/jianghaochen/Desktop/cse169_animation/include/GeneralParticle.h \
+  /Users/jianghaochen/Desktop/cse169_animation/include/shier.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/random \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/generate_canonical.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/binomial_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/cauchy_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/chi_squared_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/gamma_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/exponential_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/clamp_to_integral.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/default_random_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/linear_congruential_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/is_seed_sequence.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/discard_block_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/discrete_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/accumulate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/inner_product.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/midpoint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/partial_sum.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/fisher_f_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/geometric_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/poisson_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/normal_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/independent_bits_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/knuth_b.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/shuffle_order_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/lognormal_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/piecewise_linear_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/random_device.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/ranlux.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/seed_seq.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__random/weibull_distribution.h

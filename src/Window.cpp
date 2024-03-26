@@ -3,14 +3,20 @@
 // Window Properties
 int Window::width;
 int Window::height;
-const char *Window::windowTitle = "Lets go LVG";
+const char *Window::windowTitle = "Lets go";
 
 // Objects to render
-// Cube* Window::cube;
+Cube* Window::cube;
 Skeleton *Window::skel;
 Skin *Window::skin;
 Player *Window::player;
 Cloth* Window::cloth;
+ParticleSystem* Window::ps;
+
+float Window::newPosX;
+float Window::newPosY;
+float Window::newPosZ;
+float Window::angle;
 
 // Camera Properties
 Camera *Cam;
@@ -21,14 +27,26 @@ int MouseX, MouseY;
 
 // The shader program id
 GLuint Window::shaderProgram;
+GLuint Window::ptShaderProgram;
 
+clock_t Window::deltaT = 0;
+clock_t Window::prevT;
+int Window::countFPS = 0;
+int Window::currFPS = 0;
 // std::string Window::skelFilename;
 
 // Constructors and desctructors
 bool Window::initializeProgram()
 {
+GLfloat pointSizeRange[2];
+glGetFloatv(GL_POINT_SIZE_RANGE, pointSizeRange);
+std::cout << "Minimum supported point size: " << pointSizeRange[0] << std::endl;
+std::cout << "Maximum supported point size: " << pointSizeRange[1] << std::endl;
+
     // Create a shader program with a vertex shader and a fragment shader.
     shaderProgram = LoadShaders("shaders/shader.vert", "shaders/shader.frag");
+    ptShaderProgram = LoadShaders("shaders/point.vert", "shaders/point.frag");
+    // ptShaderProgram = LoadShaders("shaders/shader_particle.vert", "shaders/shader_particle.frag");
 
     // Check the shader program.
     if (!shaderProgram)
@@ -70,22 +88,29 @@ bool Window::initializeObjects(std::string skelfile, std::string skinfile, std::
         }
     }
 
-    cloth = new Cloth(
-		4.0f, // size 
-		100.0, //mass 
-		25, // N particles
-		glm::vec3(-2.0f, 3.0f, 0.0f), //topleft
-		glm::vec3(1.0f, 0.0f, 0.0f), // horizontal
-		glm::vec3(0.0f, -1.0f, 0.0f), // vertical
-		shaderProgram);
-    
+    // cloth = new Cloth(15, 15, shaderProgram);
+    if (cloth != nullptr)
+    {
+        newPosY = cloth->Height;
+        newPosZ = 0.0f;    
+    }
+
+
+    angle = 0.0f;
+    // particleSys = new ParticleSystem(particleShaderProgram, shaderProgram);
+    // cube = new Cube();
+    // cube = new Cube(glm::vec3(-1, 0, -2), glm::vec3(1, 1, 1));
+
+    ps = new ParticleSystem(ptShaderProgram, shaderProgram);
+
+	prevT = clock();
+
     std::cout << "Initialized objects" << std::endl;
     
     // Skeleton* skel = new Skeleton();
     // skel.Load(skelFilename);
     // // Create a cube
     // cube = new Cube();
-    // cube = new Cube(glm::vec3(-1, 0, -2), glm::vec3(1, 1, 1));
 
     return true;
 }
@@ -98,8 +123,11 @@ void Window::cleanUp()
     delete skin;
     delete player;
     delete cloth;
+    if (ps) delete ps;
     // Delete the shader program.
     glDeleteProgram(shaderProgram);
+    glDeleteProgram(ptShaderProgram);
+
 }
 
 // for the Window
@@ -159,10 +187,7 @@ GLFWwindow *Window::createWindow(int width, int height)
 
     // Call the resize callback to make sure things get drawn immediately.
     Window::resizeCallback(window, width, height);
-        GLenum err;
-	while ((err = glGetError()) != GL_NO_ERROR) {
-		std::cerr << "OpenGL error at update: " << err << std::endl;
-	}
+
     return window;
 }
 
@@ -185,6 +210,9 @@ void Window::idleCallback()
 {
     // Perform any updates as necessary.
     Cam->Update();
+    if (cube != nullptr) {
+        cube->update();
+    }
 
     if (player != nullptr)
     {
@@ -203,19 +231,36 @@ void Window::idleCallback()
 
     if (cloth != nullptr)
     {
-        cloth->Update();
+        cloth->Update(0.01f);
     }
-
+    if (ps != nullptr)
+    {
+        ps->Update();
+    }
 }
 
 void Window::displayCallback(GLFWwindow *window)
 {
-
+    //FPS
+	clock_t currT = clock();
+	deltaT += currT - prevT;
+	prevT = currT;
+	countFPS++;
+	if (deltaT >= 1000)
+	{
+		currFPS = countFPS;
+		countFPS = 0;
+		deltaT -= 1000;
+	}
+    
     // Clear the color and depth buffers.
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // Render the object.
-    // cube->draw(Cam->GetViewProjectMtx(), Window::shaderProgram);
+    if (cube != nullptr) {
+        cube->draw(Cam->GetViewProjectMtx(), Window::shaderProgram);
+    }
+
     if (skin != nullptr)
     {
         skin->draw(Cam->GetViewProjectMtx(), Window::shaderProgram);
@@ -224,9 +269,9 @@ void Window::displayCallback(GLFWwindow *window)
     {
         skel->draw(Cam->GetViewProjectMtx(), Window::shaderProgram);
     }
-        GLenum err;
+    GLenum err;
 	while ((err = glGetError()) != GL_NO_ERROR) {
-		std::cerr << "OpenGL error at update: " << err << std::endl;
+		std::cerr << "OpenGL error at upda1te: " << err << std::endl;
         exit(1);
 	}
 	if (cloth != nullptr)
@@ -234,10 +279,22 @@ void Window::displayCallback(GLFWwindow *window)
 		cloth->Draw(Cam->GetViewProjectMtx(), Window::shaderProgram);
 	}
 
+    if (ps != nullptr)
+    {
+        ps->Draw(Cam->GetViewProjectMtx(), Window::shaderProgram);
+    }
     glfwPollEvents();
 
-    plotSkeletonImGUI();
-    // plotClothImGUI();
+    if (skel != nullptr) {
+        plotSkeletonImGUI();
+    }
+    if (cloth != nullptr) {
+        plotClothImGUI();
+    }
+    if (ps != nullptr) {
+        plotParticleSystemImGUI();
+    }
+
 
     // skel->draw(Cam->GetViewProjectMtx(), Window::shaderProgram);
     // Gets events, including input such as keyboard and mouse or window resizing.
@@ -390,189 +447,136 @@ void Window::plotSkeletonImGUI(){
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
 }
-
-void Window::plotClothImGUI()
-{
-	//start imgui new frame
-	ImGui_ImplOpenGL3_NewFrame();
-	ImGui_ImplGlfw_NewFrame();
-	ImGui::NewFrame();
-	//bool show_demo_window = true;
-	//ImGui::ShowDemoWindow(&show_demo_window);
-
-	ImGuiWindowFlags window_flags = 0;
-	window_flags |= ImGuiWindowFlags_NoTitleBar;
-	window_flags |= ImGuiWindowFlags_NoResize;
-	//gui window
-	ImGui::Begin("Coefficients", NULL, window_flags);
-	ImGui::SetWindowPos(ImVec2(Window::width - 260, 0));
-	ImGui::SetWindowSize(ImVec2(260, Window::height));
-
-	std::string fps = "FPS: " + std::to_string(cloth->GetFPS());
-	ImGui::Text(fps.c_str());
-
-	if (ImGui::TreeNode("Fixed Points"))
-	{
-		float posShift = 0.05f;
-		if (ImGui::Button("\t+\t###XP"))
-		{
-			cloth->TranslateFixedParticles(0, posShift);
-		}
-		ImGui::SameLine();
-		if (ImGui::Button("\t-\t###XM"))
-		{
-			cloth->TranslateFixedParticles(0, -posShift);
-		}
-		ImGui::SameLine();
-		ImGui::Text("Axis X");
-
-		if (ImGui::Button("\t+\t###YP"))
-		{
-			cloth->TranslateFixedParticles(1, posShift);
-		}
-		ImGui::SameLine();
-		if (ImGui::Button("\t-\t###YM"))
-		{
-			cloth->TranslateFixedParticles(1, -posShift);
-		}
-		ImGui::SameLine();
-		ImGui::Text("Axis Y");
-
-		if (ImGui::Button("\t+\t###ZP"))
-		{
-			cloth->TranslateFixedParticles(2, posShift);
-		}
-		ImGui::SameLine();
-		if (ImGui::Button("\t-\t###ZM"))
-		{
-			cloth->TranslateFixedParticles(2, -posShift);
-		}
-		ImGui::SameLine();
-		ImGui::Text("Axis Z");
-
-		float rotShift = 0.02f;
-		if (ImGui::Button("\t+\t###RXP"))
-		{
-			cloth->RotateFixedParticles(0, rotShift);
-		}
-		ImGui::SameLine();
-		if (ImGui::Button("\t-\t###RXM"))
-		{
-			cloth->RotateFixedParticles(0, -rotShift);
-		}
-		ImGui::SameLine();
-		ImGui::Text("Rot X");
-
-		if (ImGui::Button("\t+\t###RYP"))
-		{
-			cloth->RotateFixedParticles(1, rotShift);
-		}
-		ImGui::SameLine();
-		if (ImGui::Button("\t-\t###RYM"))
-		{
-			cloth->RotateFixedParticles(1, -rotShift);
-		}
-		ImGui::SameLine();
-		ImGui::Text("Rot Y");
-
-		if (ImGui::Button("\t+\t###RZP"))
-		{
-			cloth->RotateFixedParticles(2, rotShift);
-		}
-		ImGui::SameLine();
-		if (ImGui::Button("\t-\t###RZM"))
-		{
-			cloth->RotateFixedParticles(2, -rotShift);
-		}
-		ImGui::SameLine();
-		ImGui::Text("Rot Z");
-
-		ImGui::NewLine();
-
-		int numOfFixedPoints = cloth->GetFixedParticleNum();
-		for (int i = 0; i < numOfFixedPoints; i++)
-		{
-			glm::vec3 pos = cloth->GetFixedParticlePos(i);
-			std::string name = "Pos " + std::to_string(i);
-			if (ImGui::InputFloat3(name.c_str(), glm::value_ptr(pos)))
-			{
-				cloth->SetFixedParticlePos(i, pos);
-			}
-		}
-		ImGui::TreePop();
-	}
-
-	if (ImGui::TreeNode("Cloth Coefficients"))
-	{
-		float clothTotalMass = cloth->GetMass();
-		if (ImGui::DragFloat("Mass", &clothTotalMass))
-		{
-			cloth->SetMass(abs(clothTotalMass));
-		}
-
-		float g = cloth->GetGravityAcce();
-		if (ImGui::DragFloat("g", &g))
-		{
-			cloth->SetGravityAcce(abs(g));
-		}
-
-		float groundPos = cloth->GetGroundPos();
-		if (ImGui::DragFloat("Ground", &groundPos))
-		{
-			cloth->SetGroundPos(groundPos);
-		}
-
-		ImGui::TreePop();
-	}
-
-	if (ImGui::TreeNode("SpringDamper Coefficients"))
-	{
-		float k_spring = cloth->GetSpringConst();
-		if (ImGui::DragFloat("Spring Constant", &k_spring))
-		{
-			cloth->SetSpringConst(abs(k_spring));
-		}
-
-		float k_damper = cloth->GetDampingConst();
-		if (ImGui::DragFloat("Damping Constant", &k_damper))
-		{
-			cloth->SetDampingConst(abs(k_damper));
-		}
-
-		ImGui::TreePop();
-	}
-
-	if (ImGui::TreeNode("Aerodynamic Coefficients"))
-	{
-		glm::vec3 windVelocity = cloth->GetWindVelocity();
-		if (ImGui::InputFloat3("V_wind", glm::value_ptr(windVelocity)))
-		{
-			cloth->SetWindVelocity(windVelocity);
-			/*std::cout << "Wind, x: " << windVelocity.x
-				<< ", y: " << windVelocity.y
-				<< ", z: " << windVelocity.z << std::endl;*/
-		}
+float SpringConstant = 0.0f;
 
 
-		float rho = cloth->GetFluidDensity();
-		if (ImGui::DragFloat("rho", &rho))
-		{
-			cloth->SetFluidDensity(abs(rho));
-		}
+void Window::plotClothImGUI() {
 
-		float C_d = cloth->GetDragConst();
-		if (ImGui::DragFloat("C_d", &C_d))
-		{
-			cloth->SetDragConst(abs(C_d));
-			//std::cout << "C_d: " << C_d << std::endl;
-		}
+    // Tell OpenGL a new frame is about to begin
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
 
-		ImGui::TreePop();
-	}
+    // ImGUI window creation
+    ImGui::Begin("Cloth Controls");
 
-	ImGui::End();
+    // ImGui to control the position of the particles in the cloth if they are fixed
+    ImGui::SliderFloat("X Position", &newPosX, -1.0f, 1.0f);
+    ImGui::SliderFloat("Y Position", &newPosY, 0.0f, cloth->Height + 10.0f);
+    ImGui::SliderFloat("Z Position", &newPosZ, -10.0f, 20.0f);
 
-	//draw imgui
-	ImGui::Render();
-	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    // if particle is fixed, set the new position while keeping the fixed particles in a row
+    for(int i = 0; i < cloth->Particles.size(); i++) {
+        if(cloth->Particles[i]->isFixed) {
+            cloth->Particles[i]->Position.x += newPosX * 0.01;
+            cloth->Particles[i]->Position.y = newPosY;
+            cloth->Particles[i]->Position.z = newPosZ;
+        }
+    }
+
+    
+    
+    // // ImGui to rotate the particles in the cloth that are fixed around the z-axis
+    // ImGui::SliderFloat("Angle", &angle, -1.0f, 1.0f);
+    // float radians = glm::radians(angle);
+
+    // // Assuming originalFixedPositions is a member variable of the Cloth class that stores the original positions.
+    // for(size_t i = 0; i < cloth->Particles.size(); ++i) {
+    //     Particle* p = cloth->Particles[i];
+    //     if (p->isFixed) {
+    //         // Get the original position
+    //         glm::vec3 originalPos = cloth->positions[i];
+    //         // Apply rotation around the z-axis
+    //         p->Position.x = originalPos.x * glm::cos(radians) - originalPos.y * glm::sin(radians);
+    //         p->Position.y = originalPos.x * glm::sin(radians) + originalPos.y * glm::cos(radians);
+    //         // z remains the same since it's a rotation around the z-axis
+    //         p->Position.z = originalPos.z;
+    //     }
+    // }
+
+   
+    // ImGui to control the wind speed
+    ImGui::SliderFloat("Wind Speed", &cloth->forwardSpeed, 0.0f, 3.0f);
+    ImGui::SliderFloat("Spring Constant", &SpringConstant, 0.0f, 10.0f);
+    ImGui::SliderFloat("Particle Mass", &cloth->ParticleMass, 0.0f, 10.0f);
+
+    for (SpringDamper* sd : cloth->Springs) {
+        sd->SpringConstant = SpringConstant;
+    }
+
+    // buttons to go to next and previous joint
+    // if (ImGui::Button("Next Joint") && skeleton->currJoint < skeleton->allJoints.size() - 1) {
+    //     skeleton->currJoint++;
+    // }
+
+    // if (ImGui::Button("Previous Joint") && skeleton->currJoint > 0) {
+    //     skeleton->currJoint--;
+    // }
+
+    // Joint* currentJoint = skeleton->allJoints[skeleton->currJoint];
+    
+    // int n = 0;
+    // for (DOF* dof : currentJoint->dofs) {
+    //     ImGui::SliderFloat("DOF slider: " + *std::to_string(n).c_str(), &dof->value, dof->min, dof->max);
+    //     n++;
+    // }
+
+    // // Reset button to reset dof values
+    // if (ImGui::Button("Reset")) {
+    //     for (DOF* dof : currentJoint->dofs) {
+    //         dof->value = 0.0f;
+    //         // skeleton->Load(filename);
+    //     }
+    // }
+
+    // // Toggle button to show the skin
+    // if (ImGui::Button("Toggle Skin")) {
+    //     skinDrawn = !skinDrawn;
+    // }
+
+    // Ends the window
+    ImGui::End();
+
+    // Renders the ImGUI elements
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+}
+void Window::plotParticleSystemImGUI() {
+    // Tell OpenGL a new frame is about to begin
+    ImGui_ImplOpenGL3_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+
+    // ImGUI window creation
+    ImGui::Begin("Particle System Controls");
+
+    // Slider for particle creation rate
+    ImGui::SliderFloat("Creation Rate", &ps->creationRate, 0.01f, 20.0f);
+
+    // Sliders for initial position and variance
+    ImGui::SliderFloat3("Initial Position", &ps->initialPos[0], -100.0f, 100.0f);
+    ImGui::SliderFloat3("Initial Position Variance", &ps->initialPosVar[0], 0.0f, 100.0f);
+
+    // Sliders for initial velocity and variance
+    ImGui::SliderFloat3("Initial Velocity", &ps->initialVelocity[0], -10.0f, 10.0f);
+    ImGui::SliderFloat3("Initial Velocity Variance", &ps->initialVelocityVar[0], 0.0f, 5.0f);
+
+    // Sliders for initial life span and variance
+    ImGui::SliderFloat("Initial Life Span", &ps->initialLifeSpan, 0.0f, 1000.0f);
+    ImGui::SliderFloat("Initial Life Span Variance", &ps->initialLifeSpanVar, 0.0f, 50.0f);
+
+    // Sliders for physics parameters
+    ImGui::SliderFloat("Gravity", &ps->g, -5.0f, 10.0f);
+    ImGui::SliderFloat("Air Density", &ps->airDensity, 0.0f, 2.0f);
+    ImGui::SliderFloat("Drag Coefficient", &ps->dragConst, 0.0f, 1.0f);
+    ImGui::SliderFloat("Particle Radius", &ps->radius, 0.1f, 25.0f);
+    ImGui::SliderFloat("Collision Elasticity", &ps->elasticity, 0.0f, 1.0f);
+    ImGui::SliderFloat("Collision Friction", &ps->friction, 0.0f, 1.0f);
+
+    // Ends the window
+    ImGui::End();
+
+    // Renders the ImGUI elements
+    ImGui::Render();
+    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 }

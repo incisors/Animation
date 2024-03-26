@@ -16,7 +16,8 @@
 #include <iostream>
 #include <vector>
 #include "glm/gtc/type_ptr.hpp"
-
+#include "ParticleSystem.h"
+#include "shier.h"
 class Window {
 public:
     // Window Properties
@@ -25,14 +26,16 @@ public:
     static const char* windowTitle;
 
     // Objects to render
-    // static Cube* cube;
+    static Cube* cube;
     static Skeleton* skel;
     static Skin* skin;
     static Player* player;
     static Cloth* cloth;
+    static ParticleSystem* ps;
 
     // Shader Program
     static GLuint shaderProgram;
+	static GLuint ptShaderProgram;
 
     // Act as Constructors and desctructors
     static bool initializeProgram();
@@ -57,4 +60,17 @@ public:
 
     static void plotSkeletonImGUI();
     static void plotClothImGUI();
+    static void plotParticleSystemImGUI();
+
+	// FPS count
+	static clock_t deltaT;
+	static clock_t prevT;
+	static int countFPS;
+	static int currFPS;
+
+    static float newPosX;
+    static float newPosY;
+    static float newPosZ;
+    static float angle;
+
 };
